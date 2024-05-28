@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Package - The Shelter Fx</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Purchase a Package</h1>
+    </header>
+    
+    <section>
+        <form id="purchase-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="package">Select Package:</label>
+            <select id="package" name="package" required>
+                <optgroup label="Online Mentorship">
+                    <option value="Monthly Plan - $40">Monthly Plan - $40</option>
+                    <option value="Quarterly Plan - $270">Quarterly Plan - $270</option>
+                    <option value="Lifetime Plan - $850">Lifetime Plan - $850</option>
+                </optgroup>
+                <optgroup label="Signal Services">
+                    <option value="Monthly Plan - $25">Monthly Plan - $25</option>
+                    <option value="Quarterly Plan - $110">Quarterly Plan - $110</option>
+                    <option value="Yearly Plan - $250">Yearly Plan - $250</option>
+                </optgroup>
+            </select>
+
+            <button type="submit">Purchase</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('purchase-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch('send_email.php', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Your purchase has been completed successfully!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error processing your request. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>

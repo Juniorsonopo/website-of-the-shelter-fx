@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shelter Fx - Your Gateway to Forex Mastery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(51, 51, 51, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        #sidebarToggle {
+            font-size: 30px;
+            cursor: pointer;
+            color: #fff;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebarToggle" onclick="openNav()">☰</div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Our Services</a>
+        <a href="#forex">What is Forex?</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#resources">Resources</a>
+        <a href="#paper-trading">Paper Trading</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <header>
+        <h1>Welcome to The Shelter Fx</h1>
+        <p>Unlock the secrets of the forex market with personalized online mentorship. At The Shelter Fx, we provide comprehensive guidance, accurate signals, and the psychological tools necessary to succeed in the dynamic world of forex trading.</p>
+    </header>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>The Shelter Fx is dedicated to empowering individuals with the knowledge and skills needed to navigate the foreign exchange market successfully. Our experienced mentors offer tailored online tutoring, helping you understand market trends, develop strategies, and build the confidence to trade effectively.</p>
+    </section>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        <h3>Online Mentorship</h3>
+        <ul>
+            <li>Personalized one-on-one tutoring sessions.</li>
+            <li>Tailored learning plans to fit your skill level and goals.</li>
+            <li>Practical insights and hands-on experience.</li>
+        </ul>
+        <h3>Signal Services</h3>
+        <ul>
+            <li>Real-time trading signals.</li>
+            <li>Detailed analysis and strategy recommendations.</li>
+            <li>Enhance your trading decisions with expert advice.</li>
+        </ul>
+        <h3>Forex Psychology</h3>
+        <ul>
+            <li>Techniques to manage trading emotions.</li>
+            <li>Building a resilient trading mindset.</li>
+            <li>Strategies to stay disciplined and focused.</li>
+        </ul>
+    </section>
+    
+    <section id="forex">
+        <h2>What is Forex?</h2>
+        <p>Forex, or foreign exchange, is the largest financial market in the world where currencies are traded. It operates 24 hours a day, allowing traders to buy, sell, exchange, and speculate on currency prices. The forex market is essential for international trade and investment, providing opportunities for profit through currency fluctuations.</p>
+        <h3>Why Trade Forex?</h3>
+        <ul>
+            <li>High liquidity and accessibility.</li>
+            <li>Opportunities to trade 24/5.</li>
+            <li>Potential for substantial returns.</li>
+            <li>Diversification of investment portfolio.</li>
+        </ul>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <h3>Online Mentorship</h3>
+        <p>Monthly Plan: $40</p>
+        <p>Quarterly Plan: $270</p>
+        <p>Lifetime Plan: $850</p>
+        
+        <h3>Signal Services</h3>
+        <p>Monthly Plan: $25</p>
+        <p>Quarterly Plan: $110</p>
+        <p>Yearly Plan: $250</p>
+    </section>
+    
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <blockquote>
+            <p>"The mentorship at The Shelter Fx transformed my approach to trading. The personalized guidance and practical tips were invaluable." - Jane D.</p>
+        </blockquote>
+        <blockquote>
+            <p>"Thanks to The Shelter Fx, I now understand the market trends and make informed decisions. The psychology sessions helped me stay calm and focused." - Mark S.</p>
+        </blockquote>
+    </section>
+    
+    <section id="resources">
+        <h2>Educational Videos</h2>
+        <ul>
+            <li><a href="videos/introduction_to_forex.mp4" target="_blank">Video 1: Introduction to Forex</a></li>
+            <li><a href="videos/understanding_currency_pairs.mp4" target="_blank">Video 2: Understanding Currency Pairs</a></li>
+            <li><a href="videos/basics_of_forex_trading.mp4" target="_blank">Video 3: Basics of Forex Trading</a></li>
+        </ul>
+    </section>
+
+    <section id="paper-trading">
+        <h2>Paper Trading</h2>
+        <form id="paper-trading-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="q1">1. What is Forex?</label><br>
+            <textarea id="q1" name="q1" rows="2" required></textarea><br>
+            <label for="q2">2. Define a currency pair.</label><br>
+            <textarea id="q2" name="q2" rows="2" required></textarea><br>
+            <!-- Add more questions as needed -->
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:theshelterfx@gmail.com">theshelterfx@gmail.com</a></p>
+        <p>Phone: <a href="tel:+27694122631">+27 69 412 2631</a></p>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#forex">What is Forex?</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#paper-trading">Paper Trading</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+
+        document.getElementById('paper-trading-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Your answers have been submitted!');
+        });
+    </script>
+</body>
+</html>
